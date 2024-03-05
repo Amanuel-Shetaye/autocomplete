@@ -70,7 +70,7 @@ Run `BenchmarkForAutocomplete` three times, once for each of the files in the Be
 
 #### Benchmarking Details
 
-On Professor Astachan's laptop, the first few lines are what's shown below for `data/threeletterwords.txt` (in addition, the `sizeInBytes` for the implementations are shown at the bottom). These numbers are for a file of every three letter word "aaa, "aab", … "zzy", "zzz", not actual words, but 3-character strings. All times are listed in seconds.
+On Professor Steiger's laptop, the first few lines are what's shown below for `data/threeletterwords.txt` (in addition, the `sizeInBytes` for the implementations are shown at the bottom). These numbers are for a file of every three letter word "aaa, "aab", … "zzy", "zzz", not actual words, but 3-character strings. All times are listed in seconds.
 
 - The `init time` data shows how long it took to initialize the different implementations.
 - The `search` column shows the prefix being used to search for autocompletions; unlabeled "search" is for an empty string `""` which matches on every term. 
@@ -94,7 +94,6 @@ b       676     50      0.00016033      0.00011954      0.00000292
 **Question 2.** Let `N` be the total number of terms, let `M` be the number of terms that prefix-match a given `search` term (the `size` column above), and let `k` be the number of highest weight terms returned by `topMatches` (the `#match` column above). The runtime complexity of `BruteAutocomplete` is `O(N + M log(k))`. The runtime complexity of `BinarySearchAutocomplete` is `O(log(N) + M log(k))`. Yet you should notice (as seen in the example timing above) that `BruteAutocomplete` is similarly efficient or even slightly more efficient than `BinarySearchAutocomplete` on the empty `search` String `""`. Answer the following:
 - Explain why this observation (that `BruteAutocomplete` is similarly efficient or even slightly more efficient than `BinarySearchAutocomplete` on the empty `search` String `""`) makes sense given the values of `N` and `M` -- in other words, is this an anomaly based on small clocktimes or is there a reason for it given the values of N, M, and what will happen with BinarySearch when searching for the empty string?
 
-
 **Question 3.** Run the `BenchmarkForAutocomplete` again using `alexa.txt` but doubling `matchSize` to `100` (`matchSize` is specified in the `runAM` method). Again copy and paste your results. Recall that `matchSize` determines `k`, the number of highest weight terms returned by `topMatches` (the `#match` column above). Do your data support the hypothesis that the dependence of the runtime on `k` is logarithmic for `BruteAutocomplete` and `BinarySearchAutocomplete`?
 
 **Question 4.** Briefly explain why `HashListAutocomplete` is much more efficient in terms of the empirical runtime of `topMatches`, but uses more memory than the other `Autocomplete` implementations.
@@ -111,11 +110,11 @@ Push your code to Git. Do this often. Once you have run and tested your complete
 
 | Points | Grading Criteria |
 | ------ | ------ |
-| 4 | Code Comparator|
+| 4 | Code for Comparator|
 | 8 |  Code for BinarySearchLibrary firstIndex and lastIndex |
 | 6 | Code for BinarySearchAutocomplete.topMatches |
 | 9 | Code for HashListAutocomplete |
 | 1 | API |
-| 8 | Analysis code and questions answered. UTAs will grade and comment on this |
+| 8 | Analysis |
 
 As for all projects, we will scale the coding and analysis to be 80% and 20% of the overall project grade, respectively.
