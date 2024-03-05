@@ -118,13 +118,4 @@ Push your code to Git. Do this often. Once you have run and tested your complete
 | 1 | API |
 | 8 | Analysis code and questions answered. UTAs will grade and comment on this |
 
-
-We will map total points you earn to scores as follows. We will record the letter grade as your grade for this assignment. For example, a score in the range of 31-26 will range from A- to A+.
-
-31-36:  A<br>
-25-30:  B<br>
-19-24:  C<br>
-12-18:  D
-
-
-
+As for all projects, we will scale the coding and analysis to be 80% and 20% of the overall project grade, respectively.
