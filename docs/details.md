@@ -123,7 +123,7 @@ since you know that `low <= high` is always true. Thus, when the loop exits, you
 
 You can determine whether to return -1 (target not present) based on the value of `high` and the value of `list.get(high)`. For example, if `high` is not a valid index, the interval is empty. ***After the loop you'll need to make one more comparison*** of `a.get(high)` with `target` to see if they are equal. ***This loop will be correct and will meet the performance bounds if you develop it using the invariant.***
 
-You'll find the **exact code you need for firstIndex** in the method `firstMatch` of the class in`BinaryBenchmark.java`. You should likely copy this code, test it, and then read the explanation for `lastIndex`.
+You'll find  **nearly the exact code you need for firstIndex** in the method `firstMatch` of the class in`BinaryBenchmark.java`. You should likely copy this code, modify it accordingly/test it, and then read the explanation for `lastIndex`. In particular, the `firstMatch` method only works for lists of Strings (instead of lists of any generic type `T`), so the call to `.compareTo` in `firstMatch` on line 80 of `BinaryBenchmark.java` must be modified to use `comp.compare` with the correct two parameters instead. (String implements `Comparable` but `T` may not, so `.compareTo` may not be implemented for the objects of type `T` in the list for `firstIndex`.)
 
 ### Code for `lastIndex`
 
