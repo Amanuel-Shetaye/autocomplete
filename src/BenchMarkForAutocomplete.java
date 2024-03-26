@@ -10,8 +10,8 @@ public class BenchMarkForAutocomplete {
 	
 	String[] myCompletorNames = {
 		"BruteAutocomplete",
-		// "BinarySearchAutocomplete",
-		// "HashListAutocomplete"
+		"BinarySearchAutocomplete",
+		"HashListAutocomplete"
 	};
 	Autocompletor[] myCompletors;
 	

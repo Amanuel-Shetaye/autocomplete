@@ -18,8 +18,8 @@ public class AutocompleteMain {
 	/* Modify name of Autocompletor implementation as necessary */
 
 	
-	final static String AUTOCOMPLETOR_CLASS_NAME = BRUTE_AUTOCOMPLETE;
-	//final static String AUTOCOMPLETOR_CLASS_NAME = BINARY_SEARCH_AUTOCOMPLETE;
+	//final static String AUTOCOMPLETOR_CLASS_NAME = BRUTE_AUTOCOMPLETE;
+	final static String AUTOCOMPLETOR_CLASS_NAME = BINARY_SEARCH_AUTOCOMPLETE;
 	//final static String AUTOCOMPLETOR_CLASS_NAME = HASHLIST_AUTOCOMPLETE;
 	
 	public static void main(String[] args) throws FileNotFoundException {
