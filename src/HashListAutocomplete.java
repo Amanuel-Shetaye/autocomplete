@@ -22,7 +22,6 @@ public class HashListAutocomplete implements Autocompletor {
 		if (terms.length != weights.length) {
 			throw new IllegalArgumentException("terms and weights are not the same length");
 		}
-        myMap = new HashMap<>();
         mySize = 0;
 		initialize(terms,weights);
     }
@@ -42,6 +41,7 @@ public class HashListAutocomplete implements Autocompletor {
 
     @Override
     public void initialize(String[] terms, double[] weights) {
+        myMap = new HashMap<>();
         for(int k = 0; k < terms.length; k++){
             String t = terms[k];
             double w = weights[k];

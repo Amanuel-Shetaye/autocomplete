@@ -49,7 +49,7 @@ public class BenchMarkForAutocomplete {
 	}
 	
 	public void runAM() {
-		int matchSize = 50;
+		int matchSize = 100;
 		String[] all = {"","", "a", "a", "b", "c", "g", "ga", "go", "gu", "x", "y", "z", "aa", "az", "za", "zz","zqzqwwx"};
 		System.out.printf("search\tsize\t#match");
 		for(int k=0; k < myCompletors.length; k++) {
@@ -97,9 +97,9 @@ public class BenchMarkForAutocomplete {
 
 	}
 	public void doMark() throws FileNotFoundException {
-		String fname = "data/threeletterwords.txt"; 
-		//fname = "data/fourletterwords.txt";
-		//fname = "data/alexa.txt";
+		//String fname = "data/threeletterwords.txt"; 
+		//String fname = "data/fourletterwords.txt";
+		String fname = "data/alexa.txt";
 		setUp(fname);
 		runAM();
 	}
